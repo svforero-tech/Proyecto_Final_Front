@@ -1,0 +1,31 @@
+# Dependencias y archivos bloqueados de Composer (obligatorio excluir según el documento)
+vendor/
+composer.lock
+
+# Variables de entorno y credenciales locales
+.env
+*.env
+
+# Archivos temporales o del sistema operativo
+*.log
+.DS_Store
+Thumbs.db
+```[cite: 1, 3]
+
+### 2. Regla importante si ya hiciste `git init` o `git add`
+* Si creas `.gitignore` **antes** de tu primer `git add .`, Git ignorará `vendor/` y `composer.lock` automáticamente[cite: 1].
+* Si por error ya habías hecho `git add` o `git commit` con `vendor/` o `composer.lock` adentro, agregarlos al `.gitignore` **no los borra solos del seguimiento de Git**. En ese caso, ejecutas esto en la terminal para sacarlos sin borrar tus carpetas locales:
+
+```bash
+git rm -r --cached vendor/
+git rm --cached composer.lock
+git status
+```[cite: 1]
+
+Con `git status` puedes verificar que `vendor/` y `composer.lock` no aparezcan listados para subir[cite: 1].
+
+<ElicitationsGroup message="¿Quieres que avancemos con el siguiente archivo base?">
+  <Elicitation label="Ver cors.php y database.php" query="Muéstrame cómo armar cors.php y database.php con Eloquent siguiendo el estilo del ZIP."/>
+  <Elicitation label="Ver public/index.php" query="Muéstrame cómo configurar public/index.php con Slim para un microservicio."/>
+  <Elicitation label="Preparar scripts SQL" query="¿Cómo divido el archivo SQL del enunciado en los scripts de cada microservicio?"/>
+</ElicitationsGroup>
