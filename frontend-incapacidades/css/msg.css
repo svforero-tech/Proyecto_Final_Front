@@ -1,0 +1,46 @@
+.msg {
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+  transition: opacity 0.25s ease;
+}
+
+.msg--success {
+  background: #e6f4ea;
+  color: #137333;
+  border: 1px solid #ceead6;
+}
+
+.msg--error {
+  background: #fce8e6;
+  color: #c5221f;
+  border: 1px solid #fad2cf;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge--activo,
+.badge--aprobada {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.badge--inactivo,
+.badge--rechazada {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.badge--en_revision,
+.badge--registrada,
+.badge--finalizada {
+  background: #fef7e0;
+  color: #b06000;
+}
